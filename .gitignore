@@ -1,0 +1,43 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.egg
+*.log
+
+# --- Django ---
+# Database files
+*.sqlite3
+
+# Static & Media
+/staticfiles/
+/media/
+
+# If you're generating collected static files, ignore them:
+static/
+media/
+
+# Django secret keys / environment files
+.env
+*.env
+.env.*
+
+# --- Virtual environment ---
+venv/
+env/
+ENV/
+.venv/
+
+# --- IDE / Editor Specific ---
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# --- OS Files ---
+.DS_Store
+Thumbs.db
