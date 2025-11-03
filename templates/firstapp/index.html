@@ -11,6 +11,30 @@
     </head>
     <body>
         <h1>Welocome to the CRUD operations page.</h1> 
+        <br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Faculty</th>
+                    <th>Created Date</th>
+                    <th>Updated Date</th>
+               </tr>
+            </thead>
+        {%if student%}
+         <tbody>
+            {%for std in student%}
+                        <tr>
+                            <td>{{std.studentName}}</td>
+                            <td>{{std.StudentFaculty}}</td>
+                            <td>{{std.CreatedAt}}</td>
+                            <td>{{std.updatedAt}}</td>
+                        </tr>
+            {%endfor%}
+            {%else%}
+            <p>No Student Found.</p>
+            </tbody>
+        {%endif%}
         <script src="" async defer></script>
     </body>
 </html>
