@@ -10,9 +10,10 @@
         <link rel="stylesheet" href="{% static 'firstapp/style.css' %}">
     </head>
     <body>
+    <div class='container'>
         <h1>Welocome to the CRUD operations page.</h1> 
         <br>
-        <table>
+        <table class='mt-40 w-100'>
             <thead>
                 <tr>
                     <th>Student Name</th>
@@ -29,12 +30,20 @@
                             <td>{{std.StudentFaculty}}</td>
                             <td>{{std.CreatedAt}}</td>
                             <td>{{std.updatedAt}}</td>
+                            <td><a href={% url 'update' std.id %}>Edit</button></a>
+                            <td><a href={% url 'update'  std.id%}>Delete</button></a>
                         </tr>
             {%endfor%}
             {%else%}
             <p>No Student Found.</p>
             </tbody>
         {%endif%}
+        <form action='' method='post'>
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type='submit'>Submit</button>
+        </form>
+    </div>
         <script src="" async defer></script>
     </body>
 </html>
